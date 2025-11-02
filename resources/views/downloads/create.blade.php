@@ -198,6 +198,65 @@
             </div>
         </div>
 
+        <!-- Update Section -->
+        <section class="mb-16">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-3">Changelog & Updates</h2>
+                    <p class="text-gray-600">Riwayat pengembangan dan peningkatan fitur NekoDrop</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Latest Update -->
+                    <div class="bg-gradient-to-r from-orange-50 to-amber-50 border-l-4 border-orange-500 p-6 rounded-r-lg">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Version 1.0.3 - 30/10/2025</h4>
+                                <p class="text-blue-600 text-sm font-medium">Maintenance Update</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-tools text-blue-600 mt-0.5"></i>
+                                <p class="text-gray-700 text-sm">Maintenance rutin fitur unduhan Instagram</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-pause-circle text-orange-600 mt-0.5"></i>
+                                <p class="text-gray-700 text-sm">Sementara menonaktifkan download Instagram post dan foto (kecuali reels masih bisa)</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-clock text-green-600 mt-0.5"></i>
+                                <p class="text-gray-700 text-sm">Peningkatan estimasi waktu download yang lebih akurat</p>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i class="fas fa-sync text-purple-600 mt-0.5"></i>
+                                <p class="text-gray-700 text-sm">Perbaikan sistem cache untuk respons yang lebih cepat</p>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <div class="text-center">
+                        <p class="text-sm text-gray-500 mb-3">Update mendatang akan segera hadir dengan fitur-fitur inovatif</p>
+                        <div class="flex items-center justify-center gap-4 text-xs text-gray-400">
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-code-branch"></i>
+                                <span>Version Control</span>
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-users"></i>
+                                <span>Community Driven</span>
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <i class="fas fa-heart"></i>
+                                <span>Open Source</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About Section -->
         <section class="mb-16">
             <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">

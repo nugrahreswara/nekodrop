@@ -264,7 +264,7 @@ class FacebookDownloaderService extends BaseDownloaderService
 
             if (!$success) {
                 $this->updateDownloadStatus($download, 'failed', [
-                    'error_message' => $lastError ?: 'All download methods failed'
+                    'error_message' => $lastError ?: 'Download Facebook Dalam Perbaikan'
                 ]);
             }
 
@@ -437,8 +437,11 @@ class FacebookDownloaderService extends BaseDownloaderService
             $command[] = '--format';
             $command[] = 'bestaudio/best';
         } else {
-            $command[] = '--format';
-            $command[] = $this->getQualityFormat($quality);
+            $formatSpec = $this->getQualityFormat($quality);
+            if ($formatSpec !== null) {
+                $command[] = '--format';
+                $command[] = $formatSpec;
+            }
         }
 
         if (!$audioOnly && $subtitles) {
@@ -506,8 +509,11 @@ class FacebookDownloaderService extends BaseDownloaderService
             $command[] = '--format';
             $command[] = 'bestaudio/best';
         } else {
-            $command[] = '--format';
-            $command[] = $this->getQualityFormat($quality);
+            $formatSpec = $this->getQualityFormat($quality);
+            if ($formatSpec !== null) {
+                $command[] = '--format';
+                $command[] = $formatSpec;
+            }
         }
 
         if ($embedMetadata) {
@@ -535,15 +541,15 @@ class FacebookDownloaderService extends BaseDownloaderService
         return $command;
     }
 
-    protected function getQualityFormat(string $quality): string
+    protected function getQualityFormat(string $quality): ?string
     {
         return match($quality) {
-            'best' => 'best',
+            'best' => null, // Don't specify format for best quality to let yt-dlp choose automatically
             '720p' => 'best[height<=720]',
             '480p' => 'best[height<=480]',
             '360p' => 'best[height<=360]',
             'worst' => 'worst',
-            default => 'best'
+            default => null
         };
     }
 
